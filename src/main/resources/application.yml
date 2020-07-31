@@ -1,0 +1,16 @@
+server:
+  port: 8888
+  servlet:    context-path: /
+    encoding:      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:  datasource:    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/security?serverTimezone=Asia/Seoul
+    username: cos
+    password: cos1234
+  mvc:    view:      prefix: /templates/
+      suffix: .mustache
+        jpa:    hibernate:      ddl-auto: update #create update none
+      naming:         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl #이걸하면 자기가 적은대로 커멜표기법으로실행함
+    show-sql: true
